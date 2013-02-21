@@ -15,6 +15,8 @@ int g_taps = 0;
 
 @implementation UGAppAppDelegate
 
+NSArray * EntityArray;
+
 @synthesize window = _window;
 @synthesize usergridClient, user;
 
@@ -70,7 +72,7 @@ int g_taps = 0;
     if ( !UsergridClient )
     {
         // Configure the org and app names
-        NSString * orgName = @"ORG_NAME";
+        NSString * orgName = @"nimasy";
         NSString * appName = @"sandbox";
 
         //Make new client
@@ -83,14 +85,68 @@ int g_taps = 0;
 
     //    - Keep the type as “Book”
     //    - Edit the title below with the name of your favorite
+   
+    NSString *book = @"Book";
+    NSString *title = @"War and Peace.";
+    
+    // Define the new entity and plug in the object 
+    NSDictionary *newEntity = [[NSDictionary alloc] initWithObjectsAndKeys:
+                          book, @"type",
+                          title, @"title",
+                          nil];
+    
+    UGClientResponse * response = [UsergridClient createEntity:newEntity];
+    
+    // get a list   of entities that meet the specified query.
+    //UGClientResponse * response = [UsergridClient getEntities:book query:];
+    
 
-    NSString * book = @"Book";
-    NSString * title = @"The old man and the sea.";
+    // 3. Congrats, you’re done!
     
-    UGClientResponse * response = [UsergridClient createGroup:book groupTitle:title];
+    // - You can try adding more properties after line 33 and reloading the page!
+    // - You can then see the admin view of this data by logging in at https://apigee.com/usergrid
+    // - Or you can go explore more advanced examples in our docs: http://apigee.com/docs/usergrid
     
     
+    [self outputResponse:response title:@"response"];
 }
+
+-(void)outputResponse:(UGClientResponse *)response title:(NSString *)title
+{
+    NSLog(@"-----%@-----", title);
+    if ( !response )
+    {
+        NSLog(@"Response is nil");
+        NSLog(@"------------------");
+        return;
+    }
+    
+    
+    if ( [response transactionState] == kUGClientResponseSuccess )
+    {
+        NSLog(@"state: SUCCESS");
+        NSLog(@"id: %d", [response transactionID]);
+        NSLog(@"raw:\n%@", [response rawResponse]);
+    }
+    else if ( [response transactionState] == kUGClientResponsePending )
+    {
+        NSLog(@"state: PENDING");
+        NSLog(@"id: %d", [response transactionID]);
+    }
+    else if ( [response transactionState] == kUGClientResponseFailure )
+    {
+        NSLog(@"state: FAILURE");
+        NSLog(@"id: %d", [response transactionID]);
+        NSLog(@"reason: '%@'", [response response]);
+        NSLog(@"raw:\n%@", [response rawResponse]);
+    }
+    else
+    {
+        NSLog(@"Object is mangled or invalid.");
+    }
+    NSLog(@"------------------");
+}
+
 
 
 @end
