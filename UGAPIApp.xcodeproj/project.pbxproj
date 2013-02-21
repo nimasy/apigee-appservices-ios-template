@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		637229DF16D4180600D8B7CC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229DE16D4180600D8B7CC /* Default-568h@2x.png */; };
 		637229E016D4190700D8B7CC /* UGAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E89D6CB0150E5B2E005F5FB9 /* UGAppAppDelegate.m */; };
+		637229E216D5F88F00D8B7CC /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229E116D5F88F00D8B7CC /* Background@2x.png */; };
+		637229E416D5F91500D8B7CC /* leftButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229E316D5F91500D8B7CC /* leftButton@2x.png */; };
 		E89D6CA1150E5B2E005F5FB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA0150E5B2E005F5FB9 /* UIKit.framework */; };
 		E89D6CA3150E5B2E005F5FB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA2150E5B2E005F5FB9 /* Foundation.framework */; };
 		E89D6CA5150E5B2E005F5FB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA4150E5B2E005F5FB9 /* CoreGraphics.framework */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		637229DE16D4180600D8B7CC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		637229E116D5F88F00D8B7CC /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background@2x.png"; path = "../../usergrid-sample-ios-messagee-master/Messagee/Images/Background@2x.png"; sourceTree = "<group>"; };
+		637229E316D5F91500D8B7CC /* leftButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftButton@2x.png"; path = "../../usergrid-sample-ios-messagee-master/Messagee/Images/leftButton@2x.png"; sourceTree = "<group>"; };
 		E89D6C9C150E5B2E005F5FB9 /* UGAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D6CA0150E5B2E005F5FB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E89D6CA2150E5B2E005F5FB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +198,8 @@
 		E89D6CA7150E5B2E005F5FB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				637229E316D5F91500D8B7CC /* leftButton@2x.png */,
+				637229E116D5F88F00D8B7CC /* Background@2x.png */,
 				E89D6CA8150E5B2E005F5FB9 /* UGAPIApp-Info.plist */,
 				E89D6CA9150E5B2E005F5FB9 /* InfoPlist.strings */,
 				E89D6CAC150E5B2E005F5FB9 /* main.m */,
@@ -321,7 +327,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = UGApp;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = E89D6C96150E5B2E005F5FB9 /* Build configuration list for PBXProject "UGAPIApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -350,6 +356,8 @@
 				E89D6CB4150E5B2E005F5FB9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E89D6CB7150E5B2E005F5FB9 /* MainStoryboard_iPad.storyboard in Resources */,
 				637229DF16D4180600D8B7CC /* Default-568h@2x.png in Resources */,
+				637229E216D5F88F00D8B7CC /* Background@2x.png in Resources */,
+				637229E416D5F91500D8B7CC /* leftButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +478,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -496,6 +508,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

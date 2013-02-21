@@ -10,15 +10,8 @@
 #import "UGClient.h"
 #import "UGClientResponse.h"
 
-UGClient *g_client = nil;
+UGClient *UsergridClient = nil;
 int g_taps = 0;
-
-//configure the org and app
-NSString * orgName = @"nimasy";
-NSString * appName = @"sandbox";
-
-NSString * username = @"myuser";
-NSString * password = @"mypass";
 
 @implementation UGAppAppDelegate
 
@@ -66,68 +59,38 @@ NSString * password = @"mypass";
 
 -(void)testUGClient
 {
-    // creation and init
-    if ( !g_client )
+    // Follow these steps:
+    
+    // 1. Initialize the Usergrid SDK
+    
+    //  Enter your orgName (username you used to register at apigee.com) below.
+    //  Keep the appName as “sandbox”: it’s a context we automatically created for you. It’s completely open by default, but don’t worry, other apps you create are not!
+
+    // Creation and init
+    if ( !UsergridClient )
     {
-        //make new client
-        g_client =[[UGClient alloc]initWithOrganizationId: orgName withApplicationID: appName];
+        // Configure the org and app names
+        NSString * orgName = @"ORG_NAME";
+        NSString * appName = @"sandbox";
+
+        //Make new client
+        UsergridClient =[[UGClient alloc]initWithOrganizationId: orgName withApplicationID: appName];
     }
     
-    username = @"myuser";
-    password = @"mypass";
+    // 2. Let’s save an object!
+    //
+    //  Great, we know your account is now! (? ASK TIM) Let’s try to create a book the system and output it on the page.
+
+    //    - Keep the type as “Book”
+    //    - Edit the title below with the name of your favorite
+
+    NSString * book = @"Book";
+    NSString * title = @"The old man and the sea.";
     
-    UGClientResponse * response = [g_client logInUser:username password:password];
-    //user = [usergridClient getLoggedInUser];
-    if (!user.username)
-    {
-        [self outputResponse:response title:@"LOG IN ERROR"];
-        return;
-    }
+    UGClientResponse * response = [UsergridClient createGroup:book groupTitle:title];
+    
     
 }
-
--(void)ugClientResponse:(UGClientResponse *)response
-{
-    // note the results
-    [self outputResponse:response title:@"Asynch Response"];
-}
-
--(void)outputResponse:(UGClientResponse *)response title:(NSString *)title
-{
-    NSLog(@"-----%@-----", title);
-    if ( !response )
-    {
-        NSLog(@"Response is nil");
-        NSLog(@"------------------");
-        return;
-    }
-    
-    
-    if ( [response transactionState] == kUGClientResponseSuccess )
-    {
-        NSLog(@"state: SUCCESS");
-        NSLog(@"id: %d", [response transactionID]);
-        NSLog(@"raw:\n%@", [response rawResponse]);
-    }
-    else if ( [response transactionState] == kUGClientResponsePending )
-    {
-        NSLog(@"state: PENDING");
-        NSLog(@"id: %d", [response transactionID]);
-    }
-    else if ( [response transactionState] == kUGClientResponseFailure )
-    {
-        NSLog(@"state: FAILURE");
-        NSLog(@"id: %d", [response transactionID]);
-        NSLog(@"reason: '%@'", [response response]);
-        NSLog(@"raw:\n%@", [response rawResponse]);
-    }
-    else 
-    {
-        NSLog(@"Object is mangled or invalid.");
-    }
-    NSLog(@"------------------");
-}
-
 
 
 @end
