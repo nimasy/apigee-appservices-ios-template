@@ -98,17 +98,15 @@ NSArray * EntityArray;
     
     UGClientResponse * response = [UsergridClient createEntity:newEntity];
     
-    // get a list   of entities that meet the specified query.
-    //UGClientResponse * response = [UsergridClient getEntities:book query:];
-    
-
     // 3. Congrats, you’re done!
     
     // - You can try adding more properties after line 33 and reloading the page!
     // - You can then see the admin view of this data by logging in at https://apigee.com/usergrid
     // - Or you can go explore more advanced examples in our docs: http://apigee.com/docs/usergrid
 
+    // Check the Output window to view response 
     [self outputResponse:response title:@"response"];
+
 }
 
 -(void)outputResponse:(UGClientResponse *)response title:(NSString *)title

@@ -10,7 +10,6 @@
 		637229DF16D4180600D8B7CC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229DE16D4180600D8B7CC /* Default-568h@2x.png */; };
 		637229E016D4190700D8B7CC /* UGAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E89D6CB0150E5B2E005F5FB9 /* UGAppAppDelegate.m */; };
 		637229E216D5F88F00D8B7CC /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229E116D5F88F00D8B7CC /* Background@2x.png */; };
-		637229E416D5F91500D8B7CC /* leftButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 637229E316D5F91500D8B7CC /* leftButton@2x.png */; };
 		E89D6CA1150E5B2E005F5FB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA0150E5B2E005F5FB9 /* UIKit.framework */; };
 		E89D6CA3150E5B2E005F5FB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA2150E5B2E005F5FB9 /* Foundation.framework */; };
 		E89D6CA5150E5B2E005F5FB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89D6CA4150E5B2E005F5FB9 /* CoreGraphics.framework */; };
@@ -60,24 +59,23 @@
 /* Begin PBXFileReference section */
 		637229DE16D4180600D8B7CC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		637229E116D5F88F00D8B7CC /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background@2x.png"; path = "../../usergrid-sample-ios-messagee-master/Messagee/Images/Background@2x.png"; sourceTree = "<group>"; };
-		637229E316D5F91500D8B7CC /* leftButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftButton@2x.png"; path = "../../usergrid-sample-ios-messagee-master/Messagee/Images/leftButton@2x.png"; sourceTree = "<group>"; };
-		E89D6C9C150E5B2E005F5FB9 /* UGAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89D6C9C150E5B2E005F5FB9 /* apigee-appservices-ios-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apigee-appservices-ios-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D6CA0150E5B2E005F5FB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E89D6CA2150E5B2E005F5FB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E89D6CA4150E5B2E005F5FB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E89D6CA8150E5B2E005F5FB9 /* UGAPIApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGAPIApp-Info.plist"; sourceTree = "<group>"; };
+		E89D6CA8150E5B2E005F5FB9 /* apigee-appservices-ios-template-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "apigee-appservices-ios-template-Info.plist"; sourceTree = "<group>"; };
 		E89D6CAA150E5B2E005F5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E89D6CAC150E5B2E005F5FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E89D6CAE150E5B2E005F5FB9 /* UGAPIApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UGAPIApp-Prefix.pch"; sourceTree = "<group>"; };
+		E89D6CAE150E5B2E005F5FB9 /* apigee-appservices-ios-template-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apigee-appservices-ios-template-Prefix.pch"; sourceTree = "<group>"; };
 		E89D6CAF150E5B2E005F5FB9 /* UGAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGAppAppDelegate.h; sourceTree = "<group>"; };
 		E89D6CB0150E5B2E005F5FB9 /* UGAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGAppAppDelegate.m; sourceTree = "<group>"; };
 		E89D6CB3150E5B2E005F5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E89D6CB6150E5B2E005F5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		E89D6CB8150E5B2E005F5FB9 /* UGAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGAppViewController.h; sourceTree = "<group>"; };
 		E89D6CB9150E5B2E005F5FB9 /* UGAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGAppViewController.m; sourceTree = "<group>"; };
-		E89D6CC0150E5B2E005F5FB9 /* UGAPIAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGAPIAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89D6CC0150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apigee-appservices-ios-templateTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D6CC1150E5B2E005F5FB9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E89D6CC9150E5B2E005F5FB9 /* UGAPIAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGAPIAppTests-Info.plist"; sourceTree = "<group>"; };
+		E89D6CC9150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "apigee-appservices-ios-templateTests-Info.plist"; sourceTree = "<group>"; };
 		E89D6CCB150E5B2E005F5FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E89D6CCD150E5B2E005F5FB9 /* UGAPIAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGAPIAppTests.h; sourceTree = "<group>"; };
 		E89D6CCE150E5B2E005F5FB9 /* UGAPIAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGAPIAppTests.m; sourceTree = "<group>"; };
@@ -154,7 +152,7 @@
 				637229DE16D4180600D8B7CC /* Default-568h@2x.png */,
 				E89D6D18150E5C54005F5FB9 /* CoreLocation.framework */,
 				E89D6CDC150E5B99005F5FB9 /* UGAPI */,
-				E89D6CA6150E5B2E005F5FB9 /* UGAPIApp */,
+				E89D6CA6150E5B2E005F5FB9 /* ios-template */,
 				E89D6CC7150E5B2E005F5FB9 /* UGAPIAppTests */,
 				E89D6C9F150E5B2E005F5FB9 /* Frameworks */,
 				E89D6C9D150E5B2E005F5FB9 /* Products */,
@@ -164,8 +162,8 @@
 		E89D6C9D150E5B2E005F5FB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E89D6C9C150E5B2E005F5FB9 /* UGAPIApp.app */,
-				E89D6CC0150E5B2E005F5FB9 /* UGAPIAppTests.octest */,
+				E89D6C9C150E5B2E005F5FB9 /* apigee-appservices-ios-template.app */,
+				E89D6CC0150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,7 +179,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E89D6CA6150E5B2E005F5FB9 /* UGAPIApp */ = {
+		E89D6CA6150E5B2E005F5FB9 /* ios-template */ = {
 			isa = PBXGroup;
 			children = (
 				E89D6CAF150E5B2E005F5FB9 /* UGAppAppDelegate.h */,
@@ -192,18 +190,18 @@
 				E89D6CB9150E5B2E005F5FB9 /* UGAppViewController.m */,
 				E89D6CA7150E5B2E005F5FB9 /* Supporting Files */,
 			);
+			name = "ios-template";
 			path = UGAPIApp;
 			sourceTree = "<group>";
 		};
 		E89D6CA7150E5B2E005F5FB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				637229E316D5F91500D8B7CC /* leftButton@2x.png */,
 				637229E116D5F88F00D8B7CC /* Background@2x.png */,
-				E89D6CA8150E5B2E005F5FB9 /* UGAPIApp-Info.plist */,
+				E89D6CA8150E5B2E005F5FB9 /* apigee-appservices-ios-template-Info.plist */,
 				E89D6CA9150E5B2E005F5FB9 /* InfoPlist.strings */,
 				E89D6CAC150E5B2E005F5FB9 /* main.m */,
-				E89D6CAE150E5B2E005F5FB9 /* UGAPIApp-Prefix.pch */,
+				E89D6CAE150E5B2E005F5FB9 /* apigee-appservices-ios-template-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,7 +219,7 @@
 		E89D6CC8150E5B2E005F5FB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E89D6CC9150E5B2E005F5FB9 /* UGAPIAppTests-Info.plist */,
+				E89D6CC9150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests-Info.plist */,
 				E89D6CCA150E5B2E005F5FB9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -284,9 +282,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E89D6C9B150E5B2E005F5FB9 /* UGAPIApp */ = {
+		E89D6C9B150E5B2E005F5FB9 /* apigee-appservices-ios-template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E89D6CD2150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "UGAPIApp" */;
+			buildConfigurationList = E89D6CD2150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "apigee-appservices-ios-template" */;
 			buildPhases = (
 				E89D6C98150E5B2E005F5FB9 /* Sources */,
 				E89D6C99150E5B2E005F5FB9 /* Frameworks */,
@@ -296,14 +294,14 @@
 			);
 			dependencies = (
 			);
-			name = UGAPIApp;
+			name = "apigee-appservices-ios-template";
 			productName = UGAPIApp;
-			productReference = E89D6C9C150E5B2E005F5FB9 /* UGAPIApp.app */;
+			productReference = E89D6C9C150E5B2E005F5FB9 /* apigee-appservices-ios-template.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E89D6CBF150E5B2E005F5FB9 /* UGAPIAppTests */ = {
+		E89D6CBF150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E89D6CD5150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "UGAPIAppTests" */;
+			buildConfigurationList = E89D6CD5150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "apigee-appservices-ios-templateTests" */;
 			buildPhases = (
 				E89D6CBB150E5B2E005F5FB9 /* Sources */,
 				E89D6CBC150E5B2E005F5FB9 /* Frameworks */,
@@ -315,9 +313,9 @@
 			dependencies = (
 				E89D6CC6150E5B2E005F5FB9 /* PBXTargetDependency */,
 			);
-			name = UGAPIAppTests;
+			name = "apigee-appservices-ios-templateTests";
 			productName = UGAPIAppTests;
-			productReference = E89D6CC0150E5B2E005F5FB9 /* UGAPIAppTests.octest */;
+			productReference = E89D6CC0150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +327,7 @@
 				CLASSPREFIX = UGApp;
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = E89D6C96150E5B2E005F5FB9 /* Build configuration list for PBXProject "UGAPIApp" */;
+			buildConfigurationList = E89D6C96150E5B2E005F5FB9 /* Build configuration list for PBXProject "apigee-appservices-ios-template" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -341,8 +339,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E89D6C9B150E5B2E005F5FB9 /* UGAPIApp */,
-				E89D6CBF150E5B2E005F5FB9 /* UGAPIAppTests */,
+				E89D6C9B150E5B2E005F5FB9 /* apigee-appservices-ios-template */,
+				E89D6CBF150E5B2E005F5FB9 /* apigee-appservices-ios-templateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,7 +355,6 @@
 				E89D6CB7150E5B2E005F5FB9 /* MainStoryboard_iPad.storyboard in Resources */,
 				637229DF16D4180600D8B7CC /* Default-568h@2x.png in Resources */,
 				637229E216D5F88F00D8B7CC /* Background@2x.png in Resources */,
-				637229E416D5F91500D8B7CC /* leftButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +428,7 @@
 /* Begin PBXTargetDependency section */
 		E89D6CC6150E5B2E005F5FB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E89D6C9B150E5B2E005F5FB9 /* UGAPIApp */;
+			target = E89D6C9B150E5B2E005F5FB9 /* apigee-appservices-ios-template */;
 			targetProxy = E89D6CC5150E5B2E005F5FB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -531,9 +528,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UGAPIApp/UGAPIApp-Prefix.pch";
-				INFOPLIST_FILE = "UGAPIApp/UGAPIApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "UGAPIApp/apigee-appservices-ios-template-Prefix.pch";
+				INFOPLIST_FILE = "UGAPIApp/apigee-appservices-ios-template-Info.plist";
+				PRODUCT_NAME = "apigee-appservices-ios-template";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -542,9 +539,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UGAPIApp/UGAPIApp-Prefix.pch";
-				INFOPLIST_FILE = "UGAPIApp/UGAPIApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "UGAPIApp/apigee-appservices-ios-template-Prefix.pch";
+				INFOPLIST_FILE = "UGAPIApp/apigee-appservices-ios-template-Info.plist";
+				PRODUCT_NAME = "apigee-appservices-ios-template";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -559,8 +556,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UGAPIApp/UGAPIApp-Prefix.pch";
-				INFOPLIST_FILE = "UGAPIAppTests/UGAPIAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "UGAPIAppTests/apigee-appservices-ios-templateTests-Info.plist";
+				PRODUCT_NAME = "apigee-appservices-ios-templateTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -576,8 +573,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UGAPIApp/UGAPIApp-Prefix.pch";
-				INFOPLIST_FILE = "UGAPIAppTests/UGAPIAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "UGAPIAppTests/apigee-appservices-ios-templateTests-Info.plist";
+				PRODUCT_NAME = "apigee-appservices-ios-templateTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -586,7 +583,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E89D6C96150E5B2E005F5FB9 /* Build configuration list for PBXProject "UGAPIApp" */ = {
+		E89D6C96150E5B2E005F5FB9 /* Build configuration list for PBXProject "apigee-appservices-ios-template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E89D6CD0150E5B2E005F5FB9 /* Debug */,
@@ -595,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E89D6CD2150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "UGAPIApp" */ = {
+		E89D6CD2150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "apigee-appservices-ios-template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E89D6CD3150E5B2E005F5FB9 /* Debug */,
@@ -604,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E89D6CD5150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "UGAPIAppTests" */ = {
+		E89D6CD5150E5B2E005F5FB9 /* Build configuration list for PBXNativeTarget "apigee-appservices-ios-templateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E89D6CD6150E5B2E005F5FB9 /* Debug */,

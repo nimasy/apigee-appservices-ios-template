@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:UGAPIApp.xcodeproj">
+      location = "self:apigee-appservices-ios-template.xcodeproj">
    </FileRef>
 </Workspace>
