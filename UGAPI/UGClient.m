@@ -87,11 +87,12 @@ NSString *g_deviceUUID = nil;
         m_baseURL = @"http://api.usergrid.com";
         m_pendingMultiStepActions = [NSMutableArray new];
         m_loggedInUser = nil;
-        m_bLogging = NO;
+        m_bLogging = NO;    
     }
     return self;
 }
 
+//-(id) initWithApplicationID:(NSString *)applicationID baseURL:(NSString *)baseURL
 -(id) initWithOrganizationId: (NSString *)organizationID withApplicationID:(NSString *)applicationID baseURL:(NSString *)baseURL
 {
     self = [super init];
@@ -412,6 +413,13 @@ NSString *g_deviceUUID = nil;
     return ret;
 }
 
+-(NSMutableString *)createURL:(NSString *)append1 append2:(NSString *)append2 append3:(NSString *)append3 append4:(NSString *)append4 append5:(NSString *)append5 append6:(NSString *)append6
+{
+    NSMutableString *ret = [NSMutableString new];
+    [ret appendFormat:@"%@/%@/%@/%@/%@/%@/%@/%@/%@", m_baseURL, m_orgID, m_appID, append1, append2, append3, append4, append5, append6];
+    return ret;
+}
+
 -(void)appendQueryToURL:(NSMutableString *)url query:(UGQuery *)query
 {
     if ( query )
@@ -676,15 +684,6 @@ NSString *g_deviceUUID = nil;
 -(UGClientResponse *)logInUserWithPin: (NSString *)userName pin:(NSString *)pin
 {
     return [self logIn:@"pin" userKey:@"username" userValue:userName pwdKey:@"pin" pwdValue:pin];
-}
-
--(UGClientResponse *)logInUserWithFacebook: (NSString *)facebookToken
-{
-    NSMutableString *url = [self createURL:@"auth/facebook"];
-    UGQuery *query = [[UGQuery alloc] init];
-    [query addURLTerm:@"fb_access_token" equals:facebookToken];
-    [self appendQueryToURL:url query:query];
-    return [self httpTransaction:url op:kUGHTTPGet opData:nil];
 }
 
 -(UGClientResponse *)logInAdmin: (NSString *)adminUserName secret:(NSString *)adminSecret
@@ -1015,7 +1014,6 @@ NSString *g_deviceUUID = nil;
     return [self httpTransaction:url op:kUGHTTPDelete opData:nil];
 }
 
-
 -(UGClientResponse *)connectEntities: (NSString *)connectorType connectorID:(NSString *)connectorID connectionType:(NSString *)connectionType connecteeType:(NSString *)connecteeType connecteeID:(NSString *)connecteeID
 {
     NSString *url = [self createURL:connectorType append2:connectorID append3:connectionType append4:connecteeType append5:connecteeID];
@@ -1027,7 +1025,6 @@ NSString *g_deviceUUID = nil;
     NSString *url = [self createURL:connectorType append2:connectorID append3:connectionType append4:connecteeID];
     return [self httpTransaction:url op:kUGHTTPPost opData:nil];
 }
-
 -(UGClientResponse *)disconnectEntities: (NSString *)connectorType connectorID:(NSString *)connectorID type:(NSString *)connectionType connecteeID:(NSString *)connecteeID
 {
     NSString *url = [self createURL:connectorType append2:connectorID append3:connectionType append4:connecteeID];

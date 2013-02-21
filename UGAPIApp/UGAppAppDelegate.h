@@ -2,15 +2,18 @@
 //  UGAppAppDelegate.h
 //  UGAPIApp
 //
-//  Created by Ed Anuff on 3/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "UGClient.h"
+
 @class UGHTTPManager;
 
 @interface UGAppAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, strong) UGClient *usergridClient;
+@property (nonatomic, strong) UGUser *user;
 
 @end

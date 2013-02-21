@@ -41,6 +41,7 @@ set the response limit in UGQuery as well.
 
 /********************* INIT AND SETUP *********************/
 // init with an app ID
+//-(id) initWithApplicationID:(NSString *)applicationID;
 -(id) initWithOrganizationId: (NSString *)organizationID withApplicationID:(NSString *)applicationID;
 
 // init with an app ID and a base UserGrid URL. This is useful if you
@@ -48,6 +49,7 @@ set the response limit in UGQuery as well.
 // UG server. The default URL is http://api.usergrid.com. The base URL
 // must be a fully formated http link, including the "http://" at the
 // beginning.
+//-(id) initWithApplicationID:(NSString *)applicationID baseURL:(NSString *)baseURL;
 -(id) initWithOrganizationId: (NSString *)organizationID withApplicationID:(NSString *)applicationID baseURL:(NSString *)baseURL;
 
 // set the delegate. See "A WORD ON NETWORK COMMUNICATION CALLS"
@@ -73,20 +75,6 @@ set the response limit in UGQuery as well.
 
 // log in with the given username and PIN value
 -(UGClientResponse *)logInUserWithPin: (NSString *)userName pin:(NSString *)pin;
-
-// log in user with Facebook token
-//
-//  //sample usage:
-//  NSString * facebookToken = @"your-facebook-token";
-//  UGClientResponse *response = [usergridClient logInUserWithFacebook:facebookToken];
-//  user = [usergridClient getLoggedInUser];
-//  if (user.username){
-//    return true;
-//  } else {
-//    return false;
-//  }
-//
--(UGClientResponse *)logInUserWithFacebook: (NSString *)facebookToken;
 
 // log in as the administrator of the application. Generally used for applications
 // that have an "administrator" feature. Not the sort of thing you want normal

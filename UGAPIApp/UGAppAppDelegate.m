@@ -2,8 +2,6 @@
 //  UGAppAppDelegate.m
 //  UGAPIApp
 //
-//  Created by Ed Anuff on 3/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "UGAppAppDelegate.h"
@@ -15,9 +13,17 @@
 UGClient *g_client = nil;
 int g_taps = 0;
 
+//configure the org and app
+NSString * orgName = @"nimasy";
+NSString * appName = @"sandbox";
+
+NSString * username = @"myuser";
+NSString * password = @"mypass";
+
 @implementation UGAppAppDelegate
 
 @synthesize window = _window;
+@synthesize usergridClient, user;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -63,24 +69,21 @@ int g_taps = 0;
     // creation and init
     if ( !g_client )
     {
-        g_client =[[UGClient alloc] initWithApplicationID:@"iOSSample"];
+        //make new client
+        g_client =[[UGClient alloc]initWithOrganizationId: orgName withApplicationID: appName];
     }
     
-    UGClientResponse *response = nil;
-    response = [g_client logInUser:@"Alice" password:@"cheshire"];
-    if ( [response transactionState] == kUGClientResponseFailure )
+    username = @"myuser";
+    password = @"mypass";
+    
+    UGClientResponse * response = [g_client logInUser:username password:password];
+    //user = [usergridClient getLoggedInUser];
+    if (!user.username)
     {
         [self outputResponse:response title:@"LOG IN ERROR"];
         return;
     }
     
-    CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:37.776753 longitude:-122.407846];
-    
-    UGQuery *query = [UGQuery new];
-    [query addRequiredWithinLocation:@"location" location:fakeLocation distance:2000];
-    
-    response = [g_client getUsers:query];
-    [self outputResponse:response title:@"getUsers Response"];
 }
 
 -(void)ugClientResponse:(UGClientResponse *)response
