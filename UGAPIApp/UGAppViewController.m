@@ -7,6 +7,7 @@
 #import "UGAppViewController.h"
 
 @interface UGAppViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *Label;
 
 @end
 
@@ -21,6 +22,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (void)SetLabeltext:(NSString*)labletext
+{
+    labletext = self.Label.text;
     // Release any retained subviews of the main view.
 }
 

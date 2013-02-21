@@ -5,6 +5,7 @@
 //
 
 #import "UGAppAppDelegate.h"
+#import "UGAppViewController.h"
 #import "UGHTTPManager.h"
 #import "SBJson.h"
 #import "UGClient.h"
@@ -18,7 +19,7 @@ int g_taps = 0;
 NSArray * EntityArray;
 
 @synthesize window = _window;
-@synthesize usergridClient, user;
+@synthesize usergridClient, user, appView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -72,7 +73,7 @@ NSArray * EntityArray;
     if ( !UsergridClient )
     {
         // Configure the org and app names
-        NSString * orgName = @"nimasy";
+        NSString * orgName = @"orgName";
         NSString * appName = @"sandbox";
 
         //Make new client
@@ -106,8 +107,7 @@ NSArray * EntityArray;
     // - You can try adding more properties after line 33 and reloading the page!
     // - You can then see the admin view of this data by logging in at https://apigee.com/usergrid
     // - Or you can go explore more advanced examples in our docs: http://apigee.com/docs/usergrid
-    
-    
+
     [self outputResponse:response title:@"response"];
 }
 
@@ -120,7 +120,6 @@ NSArray * EntityArray;
         NSLog(@"------------------");
         return;
     }
-    
     
     if ( [response transactionState] == kUGClientResponseSuccess )
     {
